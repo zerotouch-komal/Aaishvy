@@ -9,6 +9,7 @@ body {
     "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  background-color: white;
 }
 
 html {
@@ -104,184 +105,193 @@ html {
 
 /* Section 2 - Galaxy Z Flip7 & Watch8 */
 .section-2 {
-             background-image: url(../assets/Samsung-bg.avif);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 100px 20px;
-            text-align: center;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Floating product elements */
-        .floating-products {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .floating-earbuds {
-            position: absolute;
-            top: 20%;
-            left: 10%;
-            width: 120px;
-            height: 80px;
-            background: linear-gradient(135deg, #e0e0e0, #bdbdbd);
-            border-radius: 15px;
-            transform: rotate(-15deg);
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .floating-watch {
-            position: absolute;
-            top: 30%;
-            right: 15%;
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, #f5f5f5, #ffffff);
-            border-radius: 50%;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            animation: float 8s ease-in-out infinite reverse;
-        }
-
-        .floating-phone {
-            position: absolute;
-            top: 15%;
-            right: 25%;
-            width: 160px;
-            height: 200px;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            border-radius: 20px;
-            transform: rotate(25deg);
-            animation: float 7s ease-in-out infinite;
-        }
-
-        .floating-phone::before {
-            content: "";
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-            background: linear-gradient(135deg, #64b5f6, #42a5f5);
-            border-radius: 12px;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(var(--rotation, 0deg)); }
-            50% { transform: translateY(-20px) rotate(var(--rotation, 0deg)); }
-        }
-
-        .floating-earbuds { --rotation: -15deg; }
-        .floating-phone { --rotation: 25deg; }
-
-        .flip7-content {
-    max-width: 1200px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
+  background-image: url(../assets/Samsung-bg.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-        .flip7-title {
-            font-size: 64px;
-            font-weight: 700;
-            color: #000;
-            margin-bottom: 32px;
-            letter-spacing: -2px;
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
-        }
+/* Floating product elements */
+.floating-products {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
 
-        .flip7-offer {
-            font-size: 24px;
-            color: #000;
-            margin-bottom: 60px;
-            font-weight: 500;
-        }
+.floating-earbuds {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 120px;
+  height: 80px;
+  background: linear-gradient(135deg, #e0e0e0, #bdbdbd);
+  border-radius: 15px;
+  transform: rotate(-15deg);
+  animation: float 6s ease-in-out infinite;
+}
 
-        .flip7-buttons {
-            display: flex;
-            gap: 24px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+.floating-watch {
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #f5f5f5, #ffffff);
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: float 8s ease-in-out infinite reverse;
+}
 
-        .flip7-btn {
-            background: rgba(255, 255, 255, 0.1);
-            color: #000;
-            border: 2px solid #000;
-            padding: 16px 32px;
-            font-size: 16px;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            font-weight: 500;
-            backdrop-filter: blur(10px);
-        }
+.floating-phone {
+  position: absolute;
+  top: 15%;
+  right: 25%;
+  width: 160px;
+  height: 200px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border-radius: 20px;
+  transform: rotate(25deg);
+  animation: float 7s ease-in-out infinite;
+}
 
-        .flip7-btn:hover {
-            background: #000;
-            color: white;
-            transform: translateY(-2px);
-        }
+.floating-phone::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: linear-gradient(135deg, #64b5f6, #42a5f5);
+  border-radius: 12px;
+}
 
-        @media (max-width: 768px) {
-            .flip7-title {
-                font-size: 36px;
-            }
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(var(--rotation, 0deg));
+  }
+  50% {
+    transform: translateY(-20px) rotate(var(--rotation, 0deg));
+  }
+}
 
-            .flip7-offer {
-                font-size: 18px;
-            }
+.floating-earbuds {
+  --rotation: -15deg;
+}
+.floating-phone {
+  --rotation: 25deg;
+}
 
-            .flip7-buttons {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-            }
+.flip7-content {
+  max-width: 1200px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
 
-            .flip7-btn {
-                width: 100%;
-                max-width: 300px;
-            }
+.flip7-title {
+  font-size: 64px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 32px;
+  letter-spacing: -2px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
 
-            .section-2 {
-                padding: 60px 10px;
-            }
+.flip7-offer {
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 60px;
+  font-weight: 500;
+}
 
-            .floating-earbuds,
-            .floating-watch,
-            .floating-phone {
-                display: none;
-            }
-        }
+.flip7-buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-        @media (max-width: 480px) {
-            .flip7-title {
-                font-size: 28px;
-            }
+.flip7-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #000;
+  border: 2px solid #000;
+  padding: 16px 32px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
 
-            .flip7-btn {
-                padding: 12px 24px;
-                font-size: 14px;
-            }
-        }
+.flip7-btn:hover {
+  background: #000;
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .flip7-title {
+    font-size: 36px;
+  }
+
+  .flip7-offer {
+    font-size: 18px;
+  }
+
+  .flip7-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .flip7-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .section-2 {
+    padding: 60px 10px;
+  }
+
+  .floating-earbuds,
+  .floating-watch,
+  .floating-phone {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .flip7-title {
+    font-size: 28px;
+  }
+
+  .flip7-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
 
 /* Section 3 - Product Grid */
 .section-3 {
-  background: #f8f8f8;
+  background: white;
   padding: 100px 20px;
 }
 
@@ -294,7 +304,7 @@ html {
 }
 
 .product-card {
-  background: white;
+  background: #f7f7f7;
   border-radius: 20px;
   padding: 40px 30px;
   text-align: center;
@@ -304,10 +314,6 @@ html {
   overflow: hidden;
 }
 
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-}
 
 .product-card h3 h5 {
   font-size: 28px;
@@ -315,6 +321,7 @@ html {
   color: #000;
   margin-bottom: 40px;
   letter-spacing: -1px;
+  background-color: #f7f7f7;
 }
 
 .product-image {
@@ -539,4 +546,198 @@ html {
     padding: 12px 24px;
     font-size: 14px;
   }
+}
+
+.accessories {
+  text-align: center;
+  background-color: white;
+}
+
+.accessories h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 12px;
+}
+
+.accessories .subtitle {
+  font-size: 1.1rem;
+  color: #6e6e73;
+  margin-bottom: 60px;
+}
+
+.accessories-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.accessory-item {
+  background: #f7f7f7;
+  border-radius: 20px;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.accessory-item.large {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.accessory-icon img{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.large .accessory-icon img{
+  width: 250px;
+  height: 200px;
+}
+
+.accessory-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 8px;
+}
+
+.large .accessory-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.accessory-description {
+  font-size: 0.9rem;
+  color: #6e6e73;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+}
+
+.view-all-btn {
+  background: #1d1d1f;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.accessory-item:hover .accessory-description {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.accessory-item:hover .view-all-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.large .view-all-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.large:hover .accessory-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .accessories-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+  }
+
+  .accessory-item.large {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+/* About Section */
+.about-section {
+  background-color: white;
+  color: black;
+  padding: 60px 0;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about-content {
+  flex: 1 1 50%;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-content .lead {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.about-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.know-more-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+}
+
+.know-more-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.about-image {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: auto;
 }

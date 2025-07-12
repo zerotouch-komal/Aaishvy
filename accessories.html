@@ -1,0 +1,2535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+    <title>Aaishvy Gadgets | Home</title>
+    <meta
+      name="description"
+      content="Hariom Novelty is a premier distributor of smartphones and accessories across Maharashtra, Telangana, and Karnataka. Authorized National Distributor for Vivo, Mi, Realme, and Uni Accessories."
+    />
+    <meta
+      name="keywords"
+      content="Hariom Novelty, smartphone distributor, Nandurbar, Vivo, Mi, Realme, Uni Accessories, mobile accessories"
+    />
+    <meta name="author" content="Hariom Novelty" />
+    <link rel="icon" href="assets/client1.pngfavicon.ico" type="image/x-icon" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/product-list-page.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="navbar-placeholder"></div>
+    <div class="container-fluid px-4 py-3">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <span class="breadcrumb-item">Mobile</span>
+        <span class="breadcrumb-item">Galaxy Accessories</span>
+        <span class="breadcrumb-item active"
+          >Galaxy Smartphone Accessories</span
+        >
+      </nav>
+
+      <!-- Page Title -->
+      <h1 class="mb-4">All Accessories</h1>
+
+      <!-- Category Navigation -->
+      <div
+        id="category-nav"
+        style="
+          display: flex;
+          gap: 16px;
+          flex-wrap: wrap;
+          padding: 20px;
+          font-family: sans-serif;
+        "
+      >
+        <!-- all -->
+        <a
+          href="#"
+          class="category-item active"
+          onclick="setActive(this); applyCategoryFilter(['all']);"
+          style="
+            text-decoration: none;
+            color: black;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid black;
+          "
+        >
+          <img
+            src="./assets/accessories/Accessories_Visual.avif"
+            alt="Watch"
+            style="height: 60px"
+          />
+          <div style="font-weight: bold; line-height: 1.2">All Accessories</div>
+        </a>
+
+        <!-- Smartphone -->
+        <a
+          href="#"
+          class="category-item"
+          onclick="setActive(this); applyCategoryFilter(['smartphones']);"
+          style="
+            text-decoration: none;
+            color: black;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <div>
+            <img
+              src="./assets/accessories/Galaxy-Smartphone-Accessories.avif"
+              alt="Smartphone"
+              style="height: 60px"
+            />
+          </div>
+
+          <div style="font-weight: bold; line-height: 1.2">
+            Galaxy<br />Smartphone<br />Accessories
+          </div>
+        </a>
+
+        <!-- Tablet -->
+        <a
+          href="#"
+          class="category-item"
+          onclick="setActive(this); applyCategoryFilter(['tablets']);"
+          style="
+            text-decoration: none;
+            color: black;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <img
+            src="./assets/accessories/Tablet-Accessories.webp"
+            alt="Tablet"
+            style="height: 60px"
+          />
+          <div style="font-weight: bold; line-height: 1.2">
+            Galaxy Tab<br />Accessories
+          </div>
+        </a>
+
+        <!-- Watch -->
+        <a
+          href="#"
+          class="category-item"
+          onclick="setActive(this);applyCategoryFilter(['watches']);"
+          style="
+            text-decoration: none;
+            color: black;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <img
+            src="./assets/accessories/Galaxy-Watch-Accessories.avif"
+            alt="Watch"
+            style="height: 60px"
+          />
+          <div style="font-weight: bold; line-height: 1.2">
+            Galaxy Watch<br />Accessories
+          </div>
+        </a>
+
+        <!-- Chargers -->
+        <a
+          href="#"
+          class="category-item"
+          onclick="setActive(this); applyCategoryFilter(['chargers']);"
+          style="
+            text-decoration: none;
+            color: black;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <img
+            src="./assets/accessories/Chargers.webp"
+            alt="Watch"
+            style="height: 60px"
+          />
+          <div style="font-weight: bold; line-height: 1.2">Chargers</div>
+        </a>
+      </div>
+
+      <script>
+        function setActive(clickedItem) {
+          const items = document.querySelectorAll(".category-item");
+          items.forEach((item) => {
+            item.style.border = "none";
+            item.style.background = "#f9f9f9";
+          });
+          clickedItem.style.border = "1px solid black";
+          clickedItem.style.background = "#fff";
+        }
+      </script>
+
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-3 col-md-4">
+          <div class="sidebar">
+           
+
+            <div class="filter-group">
+              <h6>ACCESSORIES FOR</h6>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="smartphones"
+                />
+                <label class="form-check-label" for="smartphones">
+                  Smartphones
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="tablets" />
+                <label class="form-check-label" for="tablets"> Tablets </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="watches" />
+                <label class="form-check-label" for="watches"> Watches </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="charger-class"
+                />
+                <label class="form-check-label" for="chargers">
+                  Chargers
+                </label>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h6>CLASS</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cases" />
+                <label class="form-check-label" for="cases"> Cases </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="watch-straps"
+                />
+                <label class="form-check-label" for="watch-straps">
+                  Watch Straps
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="chargers" />
+                <label class="form-check-label" for="chargers">
+                  Chargers
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-lg-9 col-md-8">
+          <div class="header-controls">
+            <div class="results-count"><strong></strong> Results</div>
+            <div class="sort-controls">
+              <select class="sort-dropdown">
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Product Grid -->
+          <div class="product-grid">
+            <!-- Smartphones -->
+            <!-- Product 1 -->
+            <div class="product-card" data-category="cases smartphones">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-1-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Z Fold7 Carbon Shield Case
+                </h5>
+                <div class="product-color">Color: Black</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #494d53"
+                    data-color="Black"
+                    data-slide="0"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 5099</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 8499</span>
+                </div>
+                <div class="savings">Save ₹3400</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-category="cases smartphones">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-2-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-2-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-2-img-3.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-2-img-4.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Z Fold7 Silicone Case
+                </h5>
+                <div class="product-color">Color: Blue</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #46618e"
+                    data-color="Blue"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #494d53"
+                    data-color="Black"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #96989b"
+                    data-color="Gray"
+                    data-slide="2"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #c8dddd"
+                    data-color="Mint"
+                    data-slide="3"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 3,599</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 5999</span>
+                </div>
+                <div class="savings">Save ₹2400</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-category="cases smartphones">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-3-img-1.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Z Fold7 Silicone Case
+                </h5>
+                <div class="product-color">Color: Transparent</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #fff"
+                    data-color="Transparent"
+                    data-slide="0"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 2399</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 3999</span>
+                </div>
+                <div class="savings">Save ₹1600</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+             <!-- Product 4 -->
+            <div class="product-card" data-category="cases smartphones">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-4-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Z Flip7 Flipsuit Case
+                </h5>
+                <div class="product-color">Color: Transparent</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #fff"
+                    data-color="Transparent"
+                    data-slide="0"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 2399</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 3999</span>
+                </div>
+                <div class="savings">Save ₹1600</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card" data-category="cases smartphones">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-5-img-1.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-5-img-2.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-5-img-4.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-5-img-3.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Z Flip7 Ring Case (Silicone)
+                </h5>
+                <div class="product-color">Color: Blue</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #46618e"
+                    data-color="Blue"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #494d53"
+                    data-color="Black"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #c8dddd"
+                    data-color="Mint"
+                    data-slide="3"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #ee6779"
+                    data-color="Red"
+                    data-slide="2"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 2399</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 3999</span>
+                </div>
+                <div class="savings">Save ₹1600</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card" data-category="cases smartphones">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-6-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Z Flip7 Ring Case (Clear)
+                </h5>
+                <div class="product-color">Color: Transparent</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #fff"
+                    data-color="Transparent"
+                    data-slide="0"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 2399</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 3999</span>
+                </div>
+                <div class="savings">Save ₹1600</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card" data-category="cases smartphones">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-7-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Z Flip7 Anti-reflecting Film
+                </h5>
+                <div class="product-color">Color: Transparent</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #fff"
+                    data-color="Transparent"
+                    data-slide="0"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 1199</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 1999</span>
+                </div>
+                <div class="savings">Save ₹800</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card" data-category="cases smartphones">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-8-img-1.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-8-img-2.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <!-- <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-8-img-3.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Z Flip7 Ring Case (Silicone)
+                </h5>
+                <div class="product-color">Color: Light Blue</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #b6c0d6"
+                    data-color="Light Blue"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #494d53"
+                    data-color="Black"
+                    data-slide="1"
+                  ></div>
+                  <!-- <div
+                    class="color-dot"
+                    style="background: #dad9db"
+                    data-color="Light Gray"
+                    data-slide="3"
+                  ></div> -->
+                </div>
+                <div class="product-price">₹ 2399</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 2499</span>
+                </div>
+                <div class="savings">Save ₹100</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card" data-category="cases smartphones">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-9-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy A26 5G Clear Case
+                </h5>
+                <div class="product-color">Color: Transparent</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #fff"
+                    data-color="Transparent"
+                    data-slide="0"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 1599</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 1999</span>
+                </div>
+                <div class="savings">Save ₹400</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product-card" data-category="cases smartphones">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/case/case-10-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy S25 Edge Anti-reflecting Film
+                </h5>
+                <div class="product-color">Color: Transparent</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #fff"
+                    data-color="Transparent"
+                    data-slide="0"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 1999</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 2499</span>
+                </div>
+                <div class="savings">Save ₹500</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Watches -->
+            <!-- Product 1 -->
+            <div class="product-card" data-category="watch-straps watches">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-1-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-1-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-1-img-3.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-1-img-4.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-1-img-5.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Watch8 | Watch8 Classic Sport Band (S/M)
+                </h5>
+                <div class="product-color">Color: Blue</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #46618e"
+                    data-color="Blue"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #575b5f"
+                    data-color="Graphite"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #c3e3e7"
+                    data-color="Mint"
+                    data-slide="2"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #f2dee9"
+                    data-color="Pink"
+                    data-slide="3"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #f5f7f6"
+                    data-color="White"
+                    data-slide="4"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 4499</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 4999</span>
+                </div>
+                <div class="savings">Save ₹500</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card" data-category="watch-straps watches">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-2-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-2-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-2-img-3.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-2-img-4.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-2-img-5.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Watch8 | Watch8 Classic Hybrid Band (S/M/L)
+                </h5>
+                <div class="product-color">Color: Taupe</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #968f85"
+                    data-color="Taupe"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #46618e"
+                    data-color="Blue"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #494a4d"
+                    data-color="Black"
+                    data-slide="2"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #aa6938"
+                    data-color="Camel"
+                    data-slide="3"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #f5f7f6"
+                    data-color="White"
+                    data-slide="4"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 5999</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 5499</span>
+                </div>
+                <div class="savings">Save ₹500</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-category="watch-straps watches">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-1-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-1-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-1-img-3.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-1-img-4.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-1-img-5.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Watch8 | Watch8 Classic Sport Band (M/L)
+                </h5>
+                <div class="product-color">Color: Blue</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #46618e"
+                    data-color="Blue"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #575b5f"
+                    data-color="Graphite"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #c3e3e7"
+                    data-color="Mint"
+                    data-slide="2"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #f2dee9"
+                    data-color="Pink"
+                    data-slide="3"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #f5f7f6"
+                    data-color="White"
+                    data-slide="4"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 4499</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 4999</span>
+                </div>
+                <div class="savings">Save ₹500</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card" data-category="watch-straps watches">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-3-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-3-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-3-img-3.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-3-img-4.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-3-img-5.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Watch8 | Watch8 Classic Athleisure Band (S/M)
+                </h5>
+                <div class="product-color">Color: Sage</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #b6c1b4"
+                    data-color="Sage"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #46618e"
+                    data-color="Blue"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #54574f"
+                    data-color="Green"
+                    data-slide="2"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #575b5f"
+                    data-color="Graphite"
+                    data-slide="3"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #f5f7f6"
+                    data-color="White"
+                    data-slide="4"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 5999</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 6499</span>
+                </div>
+                <div class="savings">Save ₹500</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card" data-category="watch-straps watches">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-4-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-4-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-4-img-3.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Watch7 Fabric Band (S/M)
+                </h5>
+                <div class="product-color">Color: Green</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #69725f"
+                    data-color="Green"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #643e47"
+                    data-color="Wine"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #fff"
+                    data-color="Pink White"
+                    data-slide="2"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 4999</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 5499</span>
+                </div>
+                <div class="savings">Save ₹500</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card" data-category="watch-straps watches">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-5-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-5-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-5-img-3.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Watch7 Athleisure Band (M/L)
+                </h5>
+                <div class="product-color">Color: Sky Blue</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #a0c0dd"
+                    data-color="Sky Blue"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #69725f"
+                    data-color="Green"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #bdc0bf"
+                    data-color="Silver"
+                    data-slide="2"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 5999</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 6999</span>
+                </div>
+                <div class="savings">Save ₹1000</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card" data-category="watch-straps watches">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-6-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-5-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/watch/watch-6-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Watch7 Athleisure Band (S/M)
+                </h5>
+                <div class="product-color">Color: Pink</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #f0d1d8"
+                    data-color="Pink"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #69725f"
+                    data-color="Green"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #f0eae0"
+                    data-color="Cream"
+                    data-slide="2"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 5999</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 6999</span>
+                </div>
+                <div class="savings">Save ₹1000</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Chargers -->
+            <!-- Product 1 -->
+            <div class="product-card" data-category="chargers">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/charger/charger-1-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  45 W Type-C Travel Adaptor Without Cable
+                </h5>
+                <div class="product-color">Color: Black</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #000"
+                    data-color="Black"
+                    data-slide="0"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 2999</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 3499</span>
+                </div>
+                <div class="savings">Save ₹500</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-category="chargers">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/charger/charger-2-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  45 W Type-C Travel Adaptor with Cable
+                </h5>
+                <div class="product-color">Color: Black</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #000"
+                    data-color="Black"
+                    data-slide="0"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 3499</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 3799</span>
+                </div>
+                <div class="savings">Save ₹300</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+           <div class="product-card" data-category="chargers">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/charger/charger-3-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/charger/charger-3-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                 25 W Travel Adaptor without Cable
+                </h5>
+                <div class="product-color">Color: Black</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #000"
+                    data-color="Black"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #fff"
+                    data-color="White"
+                    data-slide="1"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 1399</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 1699</span>
+                </div>
+                <div class="savings">Save ₹300</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+             <!-- Product 4 -->
+           <div class="product-card" data-category="chargers">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/charger/charger-3-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/charger/charger-4-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                 25 W Travel Adaptor with Cable
+                </h5>
+                <div class="product-color">Color: Black</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #000"
+                    data-color="Black"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #fff"
+                    data-color="White"
+                    data-slide="1"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 2099</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 2299</span>
+                </div>
+                <div class="savings">Save ₹200</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+<!-- Product 5 -->
+           <div class="product-card" data-category="chargers">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/charger/charger-5-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/charger/charger-5-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                 15 W Travel Charger (with Cable)
+                </h5>
+                <div class="product-color">Color: Black</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #000"
+                    data-color="Black"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #fff"
+                    data-color="White"
+                    data-slide="1"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 1299</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 1499</span>
+                </div>
+                <div class="savings">Save ₹200</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Product 6 -->
+           <div class="product-card" data-category="chargers">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/charger/charger-6-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/charger/charger-6-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                 15 W New Design Travel Adaptor (Without Cable)
+                </h5>
+                <div class="product-color">Color: Black</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #000"
+                    data-color="Black"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #fff"
+                    data-color="White"
+                    data-slide="1"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 999</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 1199</span>
+                </div>
+                <div class="savings">Save ₹200</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+            
+             <!-- Tablets -->
+            <!-- Product 1 -->
+            <div class="product-card" data-category="tablets">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/tablet/tablet-1-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/tablet/tablet-1-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Tab S10 FE Book Cover Keyboard with dedicated AI Key
+                </h5>
+                <div class="product-color">Color: Black</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #000"
+                    data-color="Black"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #fff"
+                    data-color="White"
+                    data-slide="1"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 15999</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 17999</span>
+                </div>
+                <div class="savings">Save ₹2000</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-category="tablets">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/tablet/tablet-2-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/tablet/tablet-2-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/tablet/tablet-2-img-3.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Tab A9 Book Cover
+                </h5>
+                <div class="product-color">Color: Black</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #000"
+                    data-color="Black"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #b6c0d6"
+                    data-color="Blue"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #fff"
+                    data-color="White"
+                    data-slide="2"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 3499</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 3999</span>
+                </div>
+                <div class="savings">Save ₹500</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-category="tablets">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/tablet/tablet-3-img-1.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/tablet/tablet-3-img-2.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                 Galaxy Tab S9/ S9 FE Smart Book Cover
+                </h5>
+                <div class="product-color">Color: Black</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #000"
+                    data-color="Black"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #fff"
+                    data-color="White"
+                    data-slide="1"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 6999</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 7299</span>
+                </div>
+                <div class="savings">Save ₹300</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card" data-category="tablets">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/tablet/tablet-4-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/tablet/tablet-4-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                 Galaxy Tab S10+ Book Cover Keyboard with dedicated AI Key
+                </h5>
+                <div class="product-color">Color: Black</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #000"
+                    data-color="Black"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #fff"
+                    data-color="White"
+                    data-slide="1"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 17499</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 19999</span>
+                </div>
+                <div class="savings">Save ₹2500</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card" data-category="tablets">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/tablet/tablet-5-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/tablet/tablet-5-img-2.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/tablet/tablet-5-img-3.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy Tab A9+ Book Cover
+                </h5>
+                <div class="product-color">Color: Black</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #000"
+                    data-color="Black"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #b6c0d6"
+                    data-color="Blue"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #fff"
+                    data-color="White"
+                    data-slide="2"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 4999</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 5499</span>
+                </div>
+                <div class="savings">Save ₹500</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card" data-category="chargers">
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/accessories/charger/charger-7-img-1.avif"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Cable (Type-C)
+                </h5>
+                <div class="product-color">Color: Black</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #000"
+                    data-color="Black"
+                    data-slide="0"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 525</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 550</span>
+                </div>
+                <div class="savings">Save ₹25</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <!-- <div class="pagination-nav">
+            <button class="btn" disabled>
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/index.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Color dot functionality with image change
+      function changeColor(colorDot) {
+        const productCard = colorDot.closest(".product-card");
+        const colorText = productCard.querySelector(".product-color");
+        const slider = productCard.querySelector(".image-slider");
+
+        productCard.querySelectorAll(".color-dot").forEach((dot) => {
+          dot.classList.remove("active");
+        });
+
+        colorDot.classList.add("active");
+
+        const colorName = colorDot.dataset.color;
+        colorText.textContent = `Color: ${colorName}`;
+
+        const slideIndex = parseInt(colorDot.dataset.slide);
+        slider.dataset.currentSlide = slideIndex;
+        slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+      }
+
+      document.querySelectorAll(".color-dot").forEach((dot) => {
+        dot.addEventListener("click", function () {
+          changeColor(this);
+        });
+      });
+
+      document.querySelectorAll(".image-slider").forEach((slider) => {
+        slider.style.transform = "translateX(0%)";
+      });
+
+      // Filter functionality
+      function filterProducts() {
+        const smartphones = document.getElementById("smartphones").checked;
+        const tablets = document.getElementById("tablets").checked;
+        const watches = document.getElementById("watches").checked;
+        const chargers = document.getElementById("chargers").checked; // ACCESSORIES FOR
+        const chargerClass = document.getElementById("charger-class").checked; // CLASS
+        const cases = document.getElementById("cases").checked;
+        const watchStraps = document.getElementById("watch-straps").checked;
+        const products = document.querySelectorAll(".product-card");
+        let visibleCount = 0;
+
+        products.forEach((product) => {
+          let shouldShow = true;
+          const categories = product.dataset.category.split(" ");
+
+          // Check device type filters
+          if (!smartphones && !tablets && !watches && !chargers) {
+            shouldShow = true; // No type filter, show all
+          } else {
+            shouldShow = false;
+            if (smartphones && categories.includes("smartphones"))
+              shouldShow = true;
+            if (tablets && categories.includes("tablets")) shouldShow = true;
+            if (watches && categories.includes("watches")) shouldShow = true;
+            if (chargers && categories.includes("chargers")) shouldShow = true;
+          }
+
+          // Check class filters
+          if (shouldShow) {
+            if (!cases && !watchStraps && !chargerClass) {
+              shouldShow = true; // No class filter, show all
+            } else {
+              let classMatch = false;
+              if (cases && categories.includes("cases")) classMatch = true;
+              if (watchStraps && categories.includes("watch-straps"))
+                classMatch = true;
+              if (chargerClass && categories.includes("chargers"))
+                classMatch = true;
+              shouldShow = classMatch;
+            }
+          }
+
+          if (shouldShow) {
+            product.style.display = "block";
+            visibleCount++;
+          } else {
+            product.style.display = "none";
+          }
+        });
+
+        document.querySelector(".results-count strong").textContent =
+          visibleCount;
+        updateFilterTags();
+      }
+
+      function applyCategoryFilter(selectedIds = []) {
+        const allFilterIds = [
+          "smartphones",
+          "tablets",
+          "watches",
+          "cases",
+          "chargers",
+        ];
+
+        if (selectedIds.includes("all")) {
+          // Uncheck all checkboxes
+          allFilterIds.forEach((id) => {
+            const checkbox = document.getElementById(id);
+            if (checkbox) checkbox.checked = false;
+          });
+        } else {
+          // Check only selected ones, uncheck others
+          allFilterIds.forEach((id) => {
+            const checkbox = document.getElementById(id);
+            if (checkbox) {
+              checkbox.checked = selectedIds.includes(id);
+            }
+          });
+        }
+
+        filterProducts();
+      }
+
+      function updateFilterTags() {
+        const smartphones = document.getElementById("smartphones").checked;
+        const cases = document.getElementById("cases").checked;
+
+        const smartphoneTag = document.getElementById("filter-smartphones");
+        const casesTag = document.getElementById("filter-cases");
+
+        if (smartphones) {
+          smartphoneTag.style.display = "inline-flex";
+        } else {
+          smartphoneTag.style.display = "none";
+        }
+
+        if (cases) {
+          casesTag.style.display = "inline-flex";
+        } else {
+          casesTag.style.display = "none";
+        }
+      }
+
+      // Add event listeners to all filter checkboxes
+      document
+        .querySelectorAll('.sidebar input[type="checkbox"]')
+        .forEach((checkbox) => {
+          checkbox.addEventListener("change", filterProducts);
+        });
+
+      // Add event listeners to remove filter buttons
+      document.querySelectorAll(".remove-filter").forEach((button) => {
+        button.addEventListener("click", function (e) {
+          e.preventDefault();
+          const filterType = this.dataset.filter;
+
+          if (filterType === "smartphones") {
+            document.getElementById("smartphones").checked = false;
+          } else if (filterType === "cases") {
+            document.getElementById("cases").checked = false;
+          }
+
+          filterProducts();
+        });
+      });
+
+      // Color dot selection
+      document.querySelectorAll(".color-dot").forEach((dot) => {
+        dot.addEventListener("click", function () {
+          // Remove active class from siblings
+          this.parentElement
+            .querySelectorAll(".color-dot")
+            .forEach((sibling) => {
+              sibling.classList.remove("active");
+            });
+
+          // Add active class to clicked dot
+          this.classList.add("active");
+        });
+      });
+
+      // Sort functionality
+      document
+        .querySelector(".sort-dropdown")
+        .addEventListener("change", function () {
+          const sortValue = this.value;
+          const productGrid = document.querySelector(".product-grid");
+          const products = Array.from(
+            productGrid.querySelectorAll(".product-card")
+          );
+
+          products.sort((a, b) => {
+            switch (sortValue) {
+              case "Price: Low to High":
+                const priceA = parseFloat(
+                  a
+                    .querySelector(".product-price")
+                    .textContent.replace("₹ ", "")
+                    .replace(",", "")
+                );
+                const priceB = parseFloat(
+                  b
+                    .querySelector(".product-price")
+                    .textContent.replace("₹ ", "")
+                    .replace(",", "")
+                );
+                return priceA - priceB;
+              case "Price: High to Low":
+                const priceA2 = parseFloat(
+                  a
+                    .querySelector(".product-price")
+                    .textContent.replace("₹ ", "")
+                    .replace(",", "")
+                );
+                const priceB2 = parseFloat(
+                  b
+                    .querySelector(".product-price")
+                    .textContent.replace("₹ ", "")
+                    .replace(",", "")
+                );
+                return priceB2 - priceA2;
+              case "Newest First":
+                // Since all products have "New" badge, maintain current order
+                return 0;
+              default:
+                return 0;
+            }
+          });
+
+          // Re-append sorted products
+          products.forEach((product) => productGrid.appendChild(product));
+        });
+
+      // Quick look functionality
+      document.querySelectorAll(".quick-look").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          // Here you would typically open a modal or navigate to product details
+          alert("Quick look functionality would open here");
+        });
+      });
+
+      // Initialize filters on page load
+      filterProducts();
+    </script>
+  </body>
+</html>

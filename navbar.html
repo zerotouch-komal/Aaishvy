@@ -1,457 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samsung Distributor - Navbar</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Samsung Sharp Sans', Arial, sans-serif;
-            background-color: #f8f8f8;
-        }
+      body {
+        font-family: "Samsung Sharp Sans", Arial, sans-serif;
+        background-color: #f8f8f8;
+      }
 
-        /* Top bar */
-        .top-bar {
-            background-color: #f0f0f0;
-            padding: 8px 0;
-            font-size: 14px;
-            text-align: right;
-            border-bottom: 1px solid #e0e0e0;
-        }
+      /* Top bar */
+      .top-bar {
+        background-color: #f0f0f0;
+        padding: 8px 0;
+        font-size: 14px;
+        text-align: right;
+        border-bottom: 1px solid #e0e0e0;
+      }
 
-        .top-bar-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+      .top-bar-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-        .top-bar a {
-            color: #333;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+      .top-bar a {
+        color: #333;
+        text-decoration: none;
+        margin-left: 20px;
+      }
 
-        .top-bar a:hover {
-            color: #1f7ce8;
-        }
+      .top-bar a:hover {
+        color: #1f7ce8;
+      }
 
-        /* Main navbar */
-        .navbar {
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: relative;
-            z-index: 1000;
-        }
+      /* Main navbar */
+      .navbar {
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 1000;
+      }
 
+      .navbar-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        height: 70px;
+      }
+
+      .logo img{
+        font-size: 24px;
+        height: 50px;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+        margin-right: 60px;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        margin-left: 60px;
+      }
+
+      .nav-item {
+        position: relative;
+        margin: 0 30px;
+      }
+
+      .nav-link {
+        color: #333;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 550;
+        padding: 20px 0;
+        display: block;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: #1f7ce8;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .search-box {
+        position: relative;
+      }
+
+      .search-input {
+        border: 2px solid #e0e0e0;
+        border-radius: 20px;
+        padding: 10px 40px 10px 20px;
+        width: 300px;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.3s ease;
+      }
+
+      .search-input:focus {
+        border-color: #1f7ce8;
+      }
+
+      .search-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #666;
+      }
+
+      .cart-icon,
+      .user-icon {
+        font-size: 20px;
+        color: #333;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      .cart-icon:hover,
+      .user-icon:hover {
+        color: #1f7ce8;
+      }
+
+      /* Dropdown styles */
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        min-width: 800px;
+        padding: 30px;
+        margin-top: 10px;
+      }
+
+      .nav-item:hover .dropdown {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .dropdown-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 30px;
+      }
+
+      .dropdown-item {
+        text-align: center;
+        padding: 20px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+      }
+
+      .dropdown-item:hover {
+        background-color: #f8f9fa;
+      }
+
+      .dropdown-item img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-bottom: 15px;
+      }
+
+      .dropdown-item h3 {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+
+      .dropdown-item p {
+        font-size: 14px;
+        color: #666;
+        margin: 0;
+      }
+
+      .new-badge {
+        background-color: #1f7ce8;
+        color: white;
+        font-size: 10px;
+        padding: 2px 6px;
+        border-radius: 3px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-weight: bold;
+      }
+
+      .dropdown-item {
+        position: relative;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
         .navbar-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 70px;
+          flex-direction: column;
+          height: auto;
+          padding: 15px 20px;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #1f7ce8;
-            text-decoration: none;
+          margin-right: 0;
+          margin-bottom: 15px;
         }
 
         .nav-menu {
-            display: flex;
-            list-style: none;
-            align-items: center;
+          flex-direction: column;
+          width: 100%;
+          margin: 20px 0;
         }
 
         .nav-item {
-            position: relative;
-            margin: 0 30px;
-        }
-
-        .nav-link {
-            color: #333;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 500;
-            padding: 20px 0;
-            display: block;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #1f7ce8;
-        }
-
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .search-box {
-            position: relative;
+          margin: 10px 0;
         }
 
         .search-input {
-            border: 2px solid #e0e0e0;
-            border-radius: 20px;
-            padding: 10px 40px 10px 20px;
-            width: 300px;
-            font-size: 14px;
-            outline: none;
-            transition: border-color 0.3s ease;
+          width: 250px;
         }
 
-        .search-input:focus {
-            border-color: #1f7ce8;
-        }
-
-        .search-btn {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: #666;
-        }
-
-        .cart-icon, .user-icon {
-            font-size: 20px;
-            color: #333;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .cart-icon:hover, .user-icon:hover {
-            color: #1f7ce8;
-        }
-
-        /* Dropdown styles */
         .dropdown {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            min-width: 800px;
-            padding: 30px;
-            margin-top: 10px;
-        }
-
-        .nav-item:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
+          min-width: 300px;
+          left: 0;
+          transform: none;
         }
 
         .dropdown-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 30px;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
         }
-
-        .dropdown-item {
-            text-align: center;
-            padding: 20px;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-            cursor: pointer;
-        }
-
-        .dropdown-item:hover {
-            background-color: #f8f9fa;
-        }
-
-        .dropdown-item img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-            margin-bottom: 15px;
-        }
-
-        .dropdown-item h3 {
-            font-size: 16px;
-            color: #333;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .dropdown-item p {
-            font-size: 14px;
-            color: #666;
-            margin: 0;
-        }
-
-        .new-badge {
-            background-color: #1f7ce8;
-            color: white;
-            font-size: 10px;
-            padding: 2px 6px;
-            border-radius: 3px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-weight: bold;
-        }
-
-        .dropdown-item {
-            position: relative;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .navbar-content {
-                flex-direction: column;
-                height: auto;
-                padding: 15px 20px;
-            }
-
-            .nav-menu {
-                flex-direction: column;
-                width: 100%;
-                margin: 20px 0;
-            }
-
-            .nav-item {
-                margin: 10px 0;
-            }
-
-            .search-input {
-                width: 250px;
-            }
-
-            .dropdown {
-                min-width: 300px;
-                left: 0;
-                transform: none;
-            }
-
-            .dropdown-content {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
-    <!-- Top bar -->
-    <div class="top-bar">
-        <div class="top-bar-content">
-            <a href="#support">Support</a>
-            <a href="#business">For Business ↗</a>
-        </div>
-    </div>
-
+  </head>
+  <body>
     <!-- Main navbar -->
     <nav class="navbar">
-        <div class="navbar-content">
-            <a href="#" class="logo">SAMSUNG</a>
-            
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Mobiles</a>
-                    <div class="dropdown">
-                        <div class="dropdown-content">
-                            <div class="dropdown-item">
-                                <div class="new-badge">NEW</div>
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNmNWY1ZjUiLz4KPHJlY3QgeD0iMjAiIHk9IjE1IiB3aWR0aD0iNDAiIGhlaWdodD0iNTAiIHJ4PSI1IiBmaWxsPSIjMzMzIi8+CjxyZWN0IHg9IjI1IiB5PSIyMCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzY2NiIvPgo8L3N2Zz4K" alt="Galaxy Z">
-                                <h3>Galaxy Z</h3>
-                                <p>Foldable Smartphone</p>
-                            </div>
-                            <div class="dropdown-item">
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNmNWY1ZjUiLz4KPHJlY3QgeD0iMjUiIHk9IjEwIiB3aWR0aD0iMzAiIGhlaWdodD0iNjAiIHJ4PSI1IiBmaWxsPSIjMzMzIi8+CjxyZWN0IHg9IjMwIiB5PSIxNSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiByeD0iMiIgZmlsbD0iIzY2NiIvPgo8L3N2Zz4K" alt="Galaxy S">
-                                <h3>Galaxy S</h3>
-                                <p>Premium Smartphone</p>
-                            </div>
-                            <div class="dropdown-item">
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNmNWY1ZjUiLz4KPHJlY3QgeD0iMjUiIHk9IjEwIiB3aWR0aD0iMzAiIGhlaWdodD0iNjAiIHJ4PSI1IiBmaWxsPSIjNjY2Ii8+CjxyZWN0IHg9IjMwIiB5PSIxNSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiByeD0iMiIgZmlsbD0iIzk5OSIvPgo8L3N2Zz4K" alt="Galaxy A">
-                                <h3>Galaxy A</h3>
-                                <p>Mid-range Smartphone</p>
-                            </div>
-                            <div class="dropdown-item">
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNmNWY1ZjUiLz4KPHJlY3QgeD0iMjUiIHk9IjEwIiB3aWR0aD0iMzAiIGhlaWdodD0iNjAiIHJ4PSI1IiBmaWxsPSIjYjNlNWZjIi8+CjxyZWN0IHg9IjMwIiB5PSIxNSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiByeD0iMiIgZmlsbD0iIzY2NiIvPgo8L3N2Zz4K" alt="Galaxy M">
-                                <h3>Galaxy M</h3>
-                                <p>Budget Smartphone</p>
-                            </div>
-                            <div class="dropdown-item">
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNmNWY1ZjUiLz4KPHJlY3QgeD0iMjUiIHk9IjEwIiB3aWR0aD0iMzAiIGhlaWdodD0iNjAiIHJ4PSI1IiBmaWxsPSIjZmY4MDMzIi8+CjxyZWN0IHg9IjMwIiB5PSIxNSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE1IiByeD0iMiIgZmlsbD0iIzY2NiIvPgo8L3N2Zz4K" alt="Galaxy F">
-                                <h3>Galaxy F</h3>
-                                <p>Feature Smartphone</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Tablets</a>
-                    <div class="dropdown">
-                        <div class="dropdown-content">
-                            <div class="dropdown-item">
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNmNWY1ZjUiLz4KPHJlY3QgeD0iMTUiIHk9IjIwIiB3aWR0aD0iNTAiIGhlaWdodD0iNDAiIHJ4PSI1IiBmaWxsPSIjMzMzIi8+CjxyZWN0IHg9IjIwIiB5PSIyNSIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzY2NiIvPgo8L3N2Zz4K" alt="Galaxy Tab S">
-                                <h3>Galaxy Tab S</h3>
-                                <p>Premium Tablet</p>
-                            </div>
-                            <div class="dropdown-item">
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNmNWY1ZjUiLz4KPHJlY3QgeD0iMTUiIHk9IjIwIiB3aWR0aD0iNTAiIGhlaWdodD0iNDAiIHJ4PSI1IiBmaWxsPSIjNjY2Ii8+CjxyZWN0IHg9IjIwIiB5PSIyNSIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiByeD0iMiIgZmlsbD0iIzk5OSIvPgo8L3N2Zz4K" alt="Galaxy Tab A">
-                                <h3>Galaxy Tab A</h3>
-                                <p>Essential Tablet</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Watches</a>
-                    <div class="dropdown">
-                        <div class="dropdown-content">
-                            <div class="dropdown-item">
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNmNWY1ZjUiLz4KPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMjAiIGZpbGw9IiMzMzMiLz4KPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMTUiIGZpbGw9IiM2NjYiLz4KPHJlY3QgeD0iMzUiIHk9IjE1IiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHJ4PSIyIiBmaWxsPSIjMzMzIi8+CjxyZWN0IHg9IjM1IiB5PSI1NSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiByeD0iMiIgZmlsbD0iIzMzMyIvPgo8L3N2Zz4K" alt="Galaxy Watch Ultra">
-                                <h3>Galaxy Watch Ultra</h3>
-                                <p>Premium Smartwatch</p>
-                            </div>
-                            <div class="dropdown-item">
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNmNWY1ZjUiLz4KPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMjAiIGZpbGw9IiMzMzMiLz4KPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMTUiIGZpbGw9IiM2NjYiLz4KPC9zdmc+Cg==" alt="Galaxy Watch">
-                                <h3>Galaxy Watch</h3>
-                                <p>Smart Watch</p>
-                            </div>
-                            <div class="dropdown-item">
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNmNWY1ZjUiLz4KPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMjAiIGZpbGw9IiM2NjYiLz4KPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMTUiIGZpbGw9IiM5OTkiLz4KPC9zdmc+Cg==" alt="Galaxy Watch Classic">
-                                <h3>Galaxy Watch Classic</h3>
-                                <p>Classic Style Watch</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Accessories</a>
-                    <div class="dropdown">
-                        <div class="dropdown-content">
-                            <div class="dropdown-item">
-                                <div class="new-badge">NEW</div>
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNmNWY1ZjUiLz4KPHJlY3QgeD0iMTUiIHk9IjMwIiB3aWR0aD0iMTAiIGhlaWdodD0iMjAiIHJ4PSI1IiBmaWxsPSIjMzMzIi8+CjxyZWN0IHg9IjU1IiB5PSIzMCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjIwIiByeD0iNSIgZmlsbD0iIzMzMyIvPgo8cmVjdCB4PSIzMCIgeT0iMzUiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxMCIgcng9IjUiIGZpbGw9IiNmZjgwMzMiLz4KPC9zdmc+Cg==" alt="Smartphone Accessories">
-                                <h3>Galaxy Smartphone Accessories</h3>
-                                <p>Cases, Chargers & More</p>
-                            </div>
-                            <div class="dropdown-item">
-                                <div class="new-badge">NEW</div>
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNmNWY1ZjUiLz4KPHJlY3QgeD0iMjAiIHk9IjMwIiB3aWR0aD0iNDAiIGhlaWdodD0iMjAiIHJ4PSI1IiBmaWxsPSIjMzMzIi8+CjxyZWN0IHg9IjI1IiB5PSIzNSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjEwIiByeD0iMiIgZmlsbD0iIzY2NiIvPgo8L3N2Zz4K" alt="Tab Accessories">
-                                <h3>Galaxy Tab Accessories</h3>
-                                <p>Keyboards, Cases & Stands</p>
-                            </div>
-                            <div class="dropdown-item">
-                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNmNWY1ZjUiLz4KPHJlY3QgeD0iMjAiIHk9IjMwIiB3aWR0aD0iNDAiIGhlaWdodD0iMjAiIHJ4PSI1IiBmaWxsPSIjZmY4MDMzIi8+CjxyZWN0IHg9IjI1IiB5PSIzNSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjEwIiByeD0iMiIgZmlsbD0iIzY2NiIvPgo8L3N2Zz4K" alt="Watch Accessories">
-                                <h3>Galaxy Watch Accessories</h3>
-                                <p>Bands & Straps</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            
-            <div class="nav-actions">
-                <div class="search-box">
-                    <input type="text" class="search-input" placeholder="Search">
-                    <button class="search-btn">🔍</button>
-                </div>
-                <div class="cart-icon">🛒</div>
-                <div class="user-icon">👤</div>
-            </div>
-        </div>
+      <div class="navbar-content">
+        <a href="#" class="logo"><img src="assets/logo.png" alt=""></a>
+
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">Mobiles</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">Tablets</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">Watches</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="accessories.html" class="nav-link">Accessories</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
-    <!-- Demo content -->
-    <div style="height: 500px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">
-        Samsung Distributor Website
-    </div>
-
     <script>
-        // Add smooth scrolling and enhanced interactions
-        document.addEventListener('DOMContentLoaded', function() {
-            const dropdownItems = document.querySelectorAll('.dropdown-item');
-            
-            dropdownItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const productName = this.querySelector('h3').textContent;
-                    alert(`Clicked on ${productName}!`);
-                });
-            });
+      // Add smooth scrolling and enhanced interactions
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdownItems = document.querySelectorAll(".dropdown-item");
 
-            // Enhanced search functionality
-            const searchInput = document.querySelector('.search-input');
-            const searchBtn = document.querySelector('.search-btn');
-            
-            searchBtn.addEventListener('click', function() {
-                const query = searchInput.value.trim();
-                if (query) {
-                    alert(`Searching for: ${query}`);
-                }
-            });
-
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    const query = searchInput.value.trim();
-                    if (query) {
-                        alert(`Searching for: ${query}`);
-                    }
-                }
-            });
-
-            // Cart functionality
-            const cartIcon = document.querySelector('.cart-icon');
-            cartIcon.addEventListener('click', function() {
-                alert('Cart functionality would open here');
-            });
-
-            // User icon functionality
-            const userIcon = document.querySelector('.user-icon');
-            userIcon.addEventListener('click', function() {
-                alert('User login/profile would open here');
-            });
-
-            // Add animation delays to dropdown items
-            const navItems = document.querySelectorAll('.nav-item');
-            navItems.forEach(navItem => {
-                const dropdownItems = navItem.querySelectorAll('.dropdown-item');
-                navItem.addEventListener('mouseenter', function() {
-                    dropdownItems.forEach((item, index) => {
-                        item.style.animationDelay = `${index * 0.1}s`;
-                        item.style.animation = 'fadeInUp 0.3s ease forwards';
-                    });
-                });
-            });
-
-            // Mobile menu toggle (for future mobile implementation)
-            let mobileMenuOpen = false;
-            function toggleMobileMenu() {
-                const navMenu = document.querySelector('.nav-menu');
-                if (mobileMenuOpen) {
-                    navMenu.style.display = 'none';
-                } else {
-                    navMenu.style.display = 'flex';
-                }
-                mobileMenuOpen = !mobileMenuOpen;
-            }
+        dropdownItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            const productName = this.querySelector("h3").textContent;
+            alert(`Clicked on ${productName}!`);
+          });
         });
 
-        // Add CSS animations
-        const style = document.createElement('style');
-        style.textContent = `
+        // Enhanced search functionality
+        const searchInput = document.querySelector(".search-input");
+        const searchBtn = document.querySelector(".search-btn");
+
+        searchBtn.addEventListener("click", function () {
+          const query = searchInput.value.trim();
+          if (query) {
+            alert(`Searching for: ${query}`);
+          }
+        });
+
+        searchInput.addEventListener("keypress", function (e) {
+          if (e.key === "Enter") {
+            const query = searchInput.value.trim();
+            if (query) {
+              alert(`Searching for: ${query}`);
+            }
+          }
+        });
+
+        // Cart functionality
+        const cartIcon = document.querySelector(".cart-icon");
+        cartIcon.addEventListener("click", function () {
+          alert("Cart functionality would open here");
+        });
+
+        // User icon functionality
+        const userIcon = document.querySelector(".user-icon");
+        userIcon.addEventListener("click", function () {
+          alert("User login/profile would open here");
+        });
+
+        // Add animation delays to dropdown items
+        const navItems = document.querySelectorAll(".nav-item");
+        navItems.forEach((navItem) => {
+          const dropdownItems = navItem.querySelectorAll(".dropdown-item");
+          navItem.addEventListener("mouseenter", function () {
+            dropdownItems.forEach((item, index) => {
+              item.style.animationDelay = `${index * 0.1}s`;
+              item.style.animation = "fadeInUp 0.3s ease forwards";
+            });
+          });
+        });
+
+        // Mobile menu toggle (for future mobile implementation)
+        let mobileMenuOpen = false;
+        function toggleMobileMenu() {
+          const navMenu = document.querySelector(".nav-menu");
+          if (mobileMenuOpen) {
+            navMenu.style.display = "none";
+          } else {
+            navMenu.style.display = "flex";
+          }
+          mobileMenuOpen = !mobileMenuOpen;
+        }
+      });
+
+      // Add CSS animations
+      const style = document.createElement("style");
+      style.textContent = `
             @keyframes fadeInUp {
                 from {
                     opacity: 0;
@@ -516,7 +427,7 @@
                 }
             }
         `;
-        document.head.appendChild(style);
+      document.head.appendChild(style);
     </script>
-</body>
+  </body>
 </html>
