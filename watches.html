@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+    <title>Aaishvy Gadgets | Home</title>
+    <meta
+      name="description"
+      content="Hariom Novelty is a premier distributor of smartphones and accessories across Maharashtra, Telangana, and Karnataka. Authorized National Distributor for Vivo, Mi, Realme, and Uni Accessories."
+    />
+    <meta
+      name="keywords"
+      content="Hariom Novelty, smartphone distributor, Nandurbar, Vivo, Mi, Realme, Uni Accessories, mobile accessories"
+    />
+    <meta name="author" content="Hariom Novelty" />
+    <link rel="icon" href="assets/client1.pngfavicon.ico" type="image/x-icon" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/product-list-page.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="navbar-placeholder"></div>
+    <div class="container-fluid px-4 py-3">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <span class="breadcrumb-item">Home</span>
+        <span class="breadcrumb-item active">Galaxy Watches</span>
+      </nav>
+
+      <!-- Page Title -->
+      <h1 class="mb-4">Galaxy Watches</h1>
+
+      <!-- Category Navigation -->
+      <div
+        id="category-nav"
+        style="
+          display: flex;
+          gap: 16px;
+          flex-wrap: wrap;
+          padding: 20px;
+          font-family: sans-serif;
+        "
+      >
+        <a
+          href="#"
+          class="category-item"
+          onclick="setActive(this); applyCategoryFilter('all');"
+          style="
+            text-decoration: none;
+            color: black;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid transparent;
+          "
+        >
+          <div>
+            <img
+              src="./assets/tablet/tab-s/tab-s.avif"
+              alt="All"
+              style="height: 60px"
+            />
+          </div>
+          <div style="font-weight: bold; line-height: 1.2">All Galaxy Watches</div>
+        </a>
+
+        <a
+          href="#"
+          class="category-item"
+          onclick="setActive(this); applyCategoryFilter('Galaxy Watch Ultra');"
+          style=" text-decoration: none;
+            color: black;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid transparent;"
+        >
+          <div>
+            <img
+              src="./assets/watch/watch-ultra.png"
+              alt="Galaxy Watch Ultra"
+              style="height: 60px"
+            />
+          </div>
+          <div style="font-weight: bold">Galaxy Watch Ultra</div>
+        </a>
+        <a
+          href="#"
+          class="category-item"
+          onclick="setActive(this); applyCategoryFilter('Galaxy Watch');"
+          style=" text-decoration: none;
+            color: black;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid transparent;"
+        >
+          <div>
+            <img
+              src="./assets/watch/watch.png"
+              alt="Galaxy Watch"
+              style="height: 60px"
+            />
+          </div>
+          <div style="font-weight: bold">Galaxy Watch</div>
+        </a>
+        <a
+          href="#"
+          class="category-item"
+          onclick="setActive(this); applyCategoryFilter('Galaxy Watch Classic');"
+          style=" text-decoration: none;
+            color: black;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid transparent;"
+        >
+          <div>
+            <img
+              src="./assets/watch/watch-classic.png"
+              alt="Galaxy Watch Classic"
+              style="height: 60px"
+            />
+          </div>
+          <div style="font-weight: bold">Galaxy Watch Classic</div>
+        </a>
+      </div>
+
+      <script>
+        function setActive(clickedItem) {
+          const items = document.querySelectorAll(".category-item");
+          items.forEach((item) => {
+            item.style.border = "none";
+            item.style.background = "#f9f9f9";
+          });
+          clickedItem.style.border = "1px solid black";
+          clickedItem.style.background = "#fff";
+        }
+      </script>
+
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-3 col-md-4">
+          <!-- Sidebar -->
+          <div class="sidebar">
+            <div class="filter-group">
+               <h6>CATEGORY</h6>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="Galaxy Watch" />
+      <label class="form-check-label" for="Galaxy Watch">Galaxy Watch</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="Galaxy Fit" />
+      <label class="form-check-label" for="Galaxy Fit">Galaxy Fit</label>
+    </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-lg-9 col-md-8">
+          <div class="header-controls">
+            <div class="results-count"><strong></strong> Results</div>
+            <div class="sort-controls">
+              <select class="sort-dropdown">
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Tablet Grid -->
+          <div class="product-grid">
+            <!-- Galaxy Tab S -->
+            <!-- Product 1 -->
+            <div
+              class="product-card"
+              data-category="Galaxy-Tab-S"
+              data-connectivity="Wi-Fi"
+            >
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/mobile/m-series/mobile-1-img-1.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/mobile/m-series/mobile-1-img-2.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/mobile/m-series/mobile-1-img-3.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy M36 5G (8 GB Memory)
+                </h5>
+                <div class="product-color">Color: Serene Green</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #749d8c"
+                    data-color="Serene Green"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #292a2c"
+                    data-color="Velvet Black"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #ff5e00"
+                    data-color="Haze Orange"
+                    data-slide="2"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 19999</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 21499</span>
+                </div>
+                <div class="savings">Save ₹ 2500</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Galaxy Tab A -->
+            <!-- Product 1 -->
+            <div
+              class="product-card"
+              data-category="Galaxy Watch Ultra"
+            >
+              <div class="product-image">
+                <div class="image-container">
+                  <div class="image-slider" data-current-slide="0">
+                    <div class="image-slide">
+                      <img
+                        src="./assets/mobile/m-series/mobile-1-img-1.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/mobile/m-series/mobile-1-img-2.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                    <div class="image-slide">
+                      <img
+                        src="./assets/mobile/m-series/mobile-1-img-3.webp"
+                        alt=""
+                        style="width: 200px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-info">
+                <h5
+                  class="product-title"
+                  style="
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  "
+                >
+                  Galaxy M36sssssssssssssssssssssssssssssss 5G (8 GB Memory)
+                </h5>
+                <div class="product-color">Color: Serene Green</div>
+                <div class="color-options">
+                  <div
+                    class="color-dot active"
+                    style="background: #749d8c"
+                    data-color="Serene Green"
+                    data-slide="0"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #292a2c"
+                    data-color="Velvet Black"
+                    data-slide="1"
+                  ></div>
+                  <div
+                    class="color-dot"
+                    style="background: #ff5e00"
+                    data-color="Haze Orange"
+                    data-slide="2"
+                  ></div>
+                </div>
+                <div class="product-price">₹ 18999</div>
+                <div class="price-details">
+                  MRP (Inclusive of all taxes)
+                  <span style="text-decoration: line-through">₹ 21499</span>
+                </div>
+                <div class="savings">Save ₹ 2500</div>
+                <div class="product-actions">
+                  <a href="contact.html" class="btn btn-pre-order"
+                    >Contact Us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/index.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function setActive(clickedItem) {
+        const items = document.querySelectorAll(".category-item");
+        items.forEach((item) => {
+          item.style.border = "none";
+          item.style.background = "#f9f9f9";
+        });
+        clickedItem.style.border = "1px solid black";
+        clickedItem.style.background = "#fff";
+      }
+
+      function applyCategoryFilter(category) {
+        const products = document.querySelectorAll(".product-card");
+        let visibleCount = 0;
+
+        products.forEach((product) => {
+          const productCategory = product.dataset.category;
+          if (category === "all" || productCategory === category) {
+            product.style.display = "block";
+            visibleCount++;
+          } else {
+            product.style.display = "none";
+          }
+        });
+
+        document.querySelector(".results-count strong").textContent =
+          visibleCount;
+      }
+
+      window.addEventListener("DOMContentLoaded", () => {
+        applyCategoryFilter("all");
+        const firstCategoryItem = document.querySelector(".category-item");
+        if (firstCategoryItem) {
+          firstCategoryItem.style.border = "1px solid black";
+          firstCategoryItem.style.background = "#fff";
+        }
+      });
+
+      function getCheckedCategories() {
+        const checkboxes = document.querySelectorAll(
+          '.sidebar input[type="checkbox"]'
+        );
+        return Array.from(checkboxes)
+          .filter((checkbox) => checkbox.checked)
+          .map((checkbox) => checkbox.id);
+      }
+
+      function applyCheckboxFilter() {
+  const selectedCategories = Array.from(
+    document.querySelectorAll('.sidebar input[type="checkbox"]:checked')
+  ).map((checkbox) => checkbox.id);
+
+  const products = document.querySelectorAll(".product-card");
+  let visibleCount = 0;
+
+  products.forEach((product) => {
+    const category = product.dataset.category;
+    const matchCategory =
+      selectedCategories.length === 0 || selectedCategories.includes(category);
+
+    if (matchCategory) {
+      product.style.display = "block";
+      visibleCount++;
+    } else {
+      product.style.display = "none";
+    }
+  });
+
+  document.querySelector(".results-count strong").textContent = visibleCount;
+}
+
+
+      // Attach change event to all checkboxes
+      document
+        .querySelectorAll('.sidebar input[type="checkbox"]')
+        .forEach((checkbox) => {
+          checkbox.addEventListener("change", applyCheckboxFilter);
+        });
+
+      document
+        .querySelector(".sort-dropdown")
+        .addEventListener("change", function () {
+          const sortOrder = this.value;
+          const productGrid = document.querySelector(".product-grid");
+          const products = Array.from(
+            productGrid.querySelectorAll(".product-card")
+          );
+
+          // Extract and convert prices to numbers for sorting
+          const getPrice = (product) => {
+            const priceText =
+              product.querySelector(".product-price").textContent || "";
+            return parseFloat(priceText.replace(/[₹, ]/g, ""));
+          };
+
+          // Sort logic
+          products.sort((a, b) => {
+            const priceA = getPrice(a);
+            const priceB = getPrice(b);
+            return sortOrder.includes("Low to High")
+              ? priceA - priceB
+              : priceB - priceA;
+          });
+
+          // Clear and re-append sorted items
+          productGrid.innerHTML = "";
+          products.forEach((p) => productGrid.appendChild(p));
+        });
+
+      //color dot
+      function changeColor(colorDot) {
+        const productCard = colorDot.closest(".product-card");
+        const colorText = productCard.querySelector(".product-color");
+        const slider = productCard.querySelector(".image-slider");
+
+        productCard.querySelectorAll(".color-dot").forEach((dot) => {
+          dot.classList.remove("active");
+        });
+
+        colorDot.classList.add("active");
+
+        const colorName = colorDot.dataset.color;
+        colorText.textContent = `Color: ${colorName}`;
+
+        const slideIndex = parseInt(colorDot.dataset.slide);
+        slider.dataset.currentSlide = slideIndex;
+        slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+      }
+
+      document.querySelectorAll(".color-dot").forEach((dot) => {
+        dot.addEventListener("click", function () {
+          changeColor(this);
+        });
+      });
+
+      document.querySelectorAll(".image-slider").forEach((slider) => {
+        slider.style.transform = "translateX(0%)";
+      });
+    </script>
+  </body>
+</html>
