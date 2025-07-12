@@ -182,7 +182,12 @@
             <!-- Replace with actual product image -->
             <img src="assets/flip7.avif" alt="Galaxy Z Flip7" />
           </div>
-          <button class="hover-btn">Contact Us</button>
+          <button
+            class="hover-btn"
+            onclick="window.location.href='contact.html'"
+          >
+            Contact Us
+          </button>
         </div>
 
         <div class="product-card">
@@ -191,7 +196,12 @@
             <!-- Replace with actual product image -->
             <img src="assets/watchultra.avif" alt="Galaxy Watch8 Classic" />
           </div>
-          <button class="hover-btn">Contact Us</button>
+          <button
+            class="hover-btn"
+            onclick="window.location.href='contact.html'"
+          >
+            Contact Us
+          </button>
         </div>
 
         <div class="product-card">
@@ -200,7 +210,12 @@
             <!-- Replace with actual product image -->
             <img src="assets/watch8.avif" alt="Galaxy Watch8" />
           </div>
-          <button class="hover-btn">Contact Us</button>
+          <button
+            class="hover-btn"
+            onclick="window.location.href='contact.html'"
+          >
+            Contact Us
+          </button>
         </div>
       </div>
     </section>
@@ -219,7 +234,9 @@
           </div>
           <h3 class="accessory-title">Power Adapter</h3>
           <p class="accessory-description">Charge devices efficiently</p>
-          <a href="accessories.html"><button class="view-all-btn">View all</button></a>
+          <a href="accessories.html"
+            ><button class="view-all-btn">View all</button></a
+          >
         </div>
 
         <!-- Center Large - Case & Cover -->
@@ -232,7 +249,9 @@
             />
           </div>
           <h3 class="accessory-title">Case & Cover</h3>
-          <a href="accessories.html"><button class="view-all-btn">View all</button></a>
+          <a href="accessories.html"
+            ><button class="view-all-btn">View all</button></a
+          >
         </div>
 
         <!-- Right Column Top -->
@@ -242,7 +261,9 @@
           </div>
           <h3 class="accessory-title">Watch Strap</h3>
           <p class="accessory-description">Style for comfort</p>
-          <a href="accessories.html"><button class="view-all-btn">View all</button></a>
+          <a href="accessories.html"
+            ><button class="view-all-btn">View all</button></a
+          >
         </div>
 
         <!-- Left Column Bottom -->
@@ -252,7 +273,9 @@
           </div>
           <h3 class="accessory-title">Protective Film</h3>
           <p class="accessory-description">Keep devices protected</p>
-          <a href="accessories.html"><button class="view-all-btn">View all</button></a>
+          <a href="accessories.html"
+            ><button class="view-all-btn">View all</button></a
+          >
         </div>
 
         <!-- Right Column Bottom -->
@@ -262,7 +285,9 @@
           </div>
           <h3 class="accessory-title">Cable (Type-C)</h3>
           <p class="accessory-description">Travel with peace of mind</p>
-          <a href="accessories.html"><button class="view-all-btn">View all</button></a>
+          <a href="accessories.html"
+            ><button class="view-all-btn">View all</button></a
+          >
         </div>
       </div>
     </section>
@@ -407,17 +432,6 @@
           }
         });
       });
-
-      // Add click handlers for contact buttons
-      document
-        .querySelectorAll(".contact-btn, .hover-btn")
-        .forEach((button) => {
-          button.addEventListener("click", function (e) {
-            e.preventDefault();
-            // Add your contact logic here
-            alert("Contact form would open here");
-          });
-        });
     </script>
 
     <script>
