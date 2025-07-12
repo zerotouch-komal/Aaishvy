@@ -1,0 +1,174 @@
+.paymentOld_paymentBox__d4vf9 ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .paymentOld_paymentBox__d4vf9 ul li {
+    /* display: flex; */
+    padding: 18px;
+    box-shadow: 0px 3px 6px #6f57e914;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+  }
+  .paymentOld_paymentBox__d4vf9 ul li * {
+    cursor: pointer;
+  }
+  
+  .paymentOld_paymentBox__d4vf9 ul li:hover {
+    background-color: var(--color-bg-secondary);
+  }
+  .paymentOld_hideLineItems__ch1aK {
+    display: none !important;
+  }
+  .paymentOld_bb1__tTbzP {
+    border-bottom: 1px solid var(--grey-lite);
+  }
+  .paymentOld_section__29GIU:nth-child(4) {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  /* .bgUpi {
+    padding: 10px 40px 20px 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 5px;
+    font-size: 10px;
+    background-image: url("/public/assets/images/payment/bg_upi.svg");
+  } */
+  .paymentOld_upiContainer__5J8A4 img {
+    height: 16px;
+  }
+  .paymentOld_qrCode__tUOf- {
+    border: 1px solid var(--grey-lite);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    padding: 16px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .paymentOld_upiContainer__5J8A4 .paymentOld_item__5Kayw {
+    padding: 15px;
+    width: 40%;
+    border: 1px solid #efefef;
+    box-shadow: 0px 3px 6px #E0E0E04D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .paymentOld_upiContainer__5J8A4 .paymentOld_item__5Kayw:hover {
+    border: 1px solid var(--ascent-bg-lite);
+    background-color: var(--ascent-bg-lite);
+  }
+  .paymentOld_upiContainer__5J8A4 .paymentOld_item__5Kayw:first-child {
+    margin-right: 10px;
+  }
+  .paymentOld_OR__wd9Pr {
+    position: relative;
+    text-align: center;
+    color: var(--grey-medium);
+    font-size: 14px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+  .paymentOld_OR__wd9Pr::before,
+  .paymentOld_OR__wd9Pr::after {
+    content: "";
+    height: 1px;
+    width: 46%;
+    position: absolute;
+    background-color: var(--grey-lite);
+    top: calc(100% - 8px);
+  }
+  .paymentOld_OR__wd9Pr::before {
+    left: 0;
+  }
+  .paymentOld_OR__wd9Pr::after {
+    right: 0;
+  }
+  .paymentOld_greyScale__a0efu {
+    filter: grayscale(1);
+  }
+  .paymentOld_h12__Wg0\+l {
+    height: 12px !important;
+  }
+  
+  /* .upArrow {
+    height: auto;
+    width: 12px;
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-left: 4px;
+    margin-right: 2px;
+  } */
+  
+  /* .downArrow {
+    height: auto;
+    width: 17px;
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-left: 2px;
+  } */
+  
+  /* .upArrow img,
+  .downArrow img {
+    height: 100%;
+    width: 100%;
+  } */
+  
+  .paymentOld_prepaidDiscount__eGNLq {
+    display: inline-block;
+    background-color: #e9b35747;
+    color: #ff851b;
+    padding: 2px 7px 2px 7px;
+    border-radius: 10px;
+    position: relative;
+    font-size: 10px;
+    display: inline-flex;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+  .paymentOld_prepaidDiscount__eGNLq > img {
+    padding-right: 1px;
+  }
+  .paymentOld_fireLogo__RSxAn {
+    padding-bottom: 4px;
+    padding-top: 2px;
+  }
+  
+  .paymentOld_emailButton__jg8vm {
+      width: 45%;
+      background-color: var(--black-color);
+      color: var(--white);
+      border: 0;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.5s ease-in;
+  }
+  
+  .paymentOld_emailButton__jg8vm:disabled {
+    width: 30%;
+    opacity: 0.5;
+    background-color: var(--black-color);
+    color: var(--white);
+    border: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in;
+  }
+   
+  

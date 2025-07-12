@@ -1,0 +1,99 @@
+ const getCookieValueCtp = (cname) => {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  const setCookieCtp = (data) => {
+    var exdate = new Date(data.time);
+    exdate.setDate(exdate.getDate());
+    document.cookie =
+      encodeURIComponent(data.name) +
+      '=' +
+      encodeURIComponent(data.data) +
+      '; expires=' +
+      exdate.toUTCString()+';path=/;SameSite=None;Secure';
+  }
+  
+  const hideCtpDiv = () => {
+    document.getElementById('prepaid-conversion-container').style.display = "none"
+  }
+  
+  let checkoutUrlCtp = 'https://fastrr-boost-ui.pickrr.com/'
+  
+  let fastrrCtpData = getCookieValueCtp('fastrrCtpData')
+  let timeCtp = getCookieValueCtp('fastrrOrderPlacedTimeCtp')
+  let sellerId = getCookieValueCtp('fastrrSellerId')
+  
+  if(fastrrCtpData && timeCtp && sellerId) {
+
+    let ctpSection =  document.getElementById("prepaid-conversion-container")
+  
+    // create a div element - container
+    let ctpContainer = document.createElement('div')
+  
+    ctpContainer.innerHTML = `<iframe id="ctp-iframe" src="${checkoutUrlCtp}?fastrr_ctp_id=${fastrrCtpData}&timeCtp=${timeCtp}&seller_id_ctp=${sellerId}" width="100%" style="margin-top:20px;"></iframe>`
+
+    //append iFrame to parent device based
+    ctpSection.appendChild(ctpContainer)
+  
+  } else {
+    hideCtpDiv()
+  }
+  
+  
+  // give access to parent storage
+  const loadHeadlessStorageCtp = () => {
+      document.getElementById("ctp-iframe").contentWindow.postMessage(
+          {
+            trigger: 'headless-storage',
+            data: JSON.stringify(window.localStorage),
+          },
+          checkoutUrlCtp
+        );
+  }
+  
+  //set height dynamically to make iframe not take any extra space
+  const setHeightCtp = (height) => {
+    var iframe = document.getElementById("ctp-iframe");
+    iframe.height = height + 30
+  }
+
+  const redirectThruCtp = (link) => {
+    window.location.href = link
+  }
+  
+  // event listener
+  let CheckoutMessageListenerCtp = function (event) {
+      let data = event.data;
+      switch (data.trigger) {
+        case 'headless-storage-ctp':
+          loadHeadlessStorageCtp()
+          break;
+        case 'set-height-ctp': 
+          setHeightCtp(data?.height)
+          break;
+        case 'hide-ctp-div':
+          hideCtpDiv()
+          break;
+        case 'redirect-thru-ctp':
+          redirectThruCtp(data?.link)
+          break;
+         case 'set-cookie-ctp':
+           setCookieCtp(data?.data)
+           break;
+        default:
+            break;
+      }
+    };
+  
+  window.addEventListener('message', CheckoutMessageListenerCtp, false);
